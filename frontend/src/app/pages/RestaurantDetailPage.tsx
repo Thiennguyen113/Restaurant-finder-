@@ -29,7 +29,7 @@ export function RestaurantDetailPage() {
   const [reviewError, setReviewError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [qrImageUrl, setQrImageUrl] = useState("");
-  const shareUrl = `http://localhost:5173/restaurant/${id ?? ""}`;
+  const shareUrl = `${window.location.origin}/restaurant/${id ?? ""}`;
 
   useEffect(() => {
     if (!id) return;
